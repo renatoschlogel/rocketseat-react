@@ -1,2 +1,2 @@
 # rocketseat-react
-Cusro de React da Rocketseat
+Curso de React da Rocketseat
