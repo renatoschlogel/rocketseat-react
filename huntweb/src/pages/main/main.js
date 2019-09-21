@@ -3,6 +3,6 @@ import api from '../../services/api';
 
 export default function main() {
     return (
-       <h1>Oláaaaaa Renato</h1>
+       <h1>Agora vai</h1>
     );
   }
