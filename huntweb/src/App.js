@@ -2,7 +2,7 @@ import React from 'react';
 import Header from './components/header/header';
 import './styles.css';
 
-import Main from './pages/main/main';
+import Routes from './routes';
 
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
     <div className="App">
 
       <Header/>
-      <Main/>
+      <Routes/>
      
     </div>
   );

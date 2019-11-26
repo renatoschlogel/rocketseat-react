@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import api from '../../services/api';
 import './main.css';
+import {Link} from 'react-router-dom';
 
 export default class Main extends Component {
 
@@ -15,8 +16,9 @@ export default class Main extends Component {
    }
 
    loadProdcts = async (page = 1) => {
+      console.log('Consultando produtos ..... ');
       const response = await api.get(`products?page=${page}`);
-      console.log(response);
+      console.log('Produtos consultados: ',  response);
       const { docs, ...productsInfo } = response.data;
 
       this.setState({products: docs, productsInfo, page });
@@ -49,7 +51,7 @@ export default class Main extends Component {
                   <strong>{product.title}</strong>
                   <p>{product.description}</p>
 
-                  <a href="">Acessar</a>
+                  <Link to={`/products/${product._id}`}>Acessar</Link>
                   
                </article>
             ))}
